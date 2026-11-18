@@ -1,0 +1,45 @@
+name: AI 結果不準
+description: 照片或文字的熱量、蛋白質，或建議明顯不對
+labels: ["accuracy"]
+body:
+  - type: markdown
+    attributes:
+      value: "這裡是公開的。描述食物或訓練就好，不需要貼你的體重或用藥。"
+  - type: dropdown
+    id: where
+    attributes:
+      label: 哪個功能
+      options:
+        - 拍照記錄飲食
+        - 打字記錄飲食
+        - 營養標示照片
+        - 訓練紀錄或運動截圖
+        - 今日建議
+        - 下一餐建議
+        - 訓練建議
+    validations:
+      required: true
+  - type: textarea
+    id: input
+    attributes:
+      label: 你輸入了什麼
+      placeholder: 例如：一碗牛肉麵加滷蛋（照片可附，請確認沒有個人資訊）
+    validations:
+      required: true
+  - type: textarea
+    id: got
+    attributes:
+      label: App 給的結果
+      placeholder: 例如：320 大卡、蛋白質 12 g
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 你覺得合理的結果與理由
+      placeholder: 例如：應該 600 大卡左右，包裝上寫一碗 580 大卡
+  - type: input
+    id: when
+    attributes:
+      label: 大約什麼時候
+      placeholder: 例如：11/18 中午

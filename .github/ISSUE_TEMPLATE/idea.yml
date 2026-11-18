@@ -1,0 +1,26 @@
+name: 建議
+description: 希望增加或改變的功能
+labels: ["idea"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: 你遇到的情況
+      placeholder: 例如：每次在超商都要想很久要買什麼
+    validations:
+      required: true
+  - type: textarea
+    id: wish
+    attributes:
+      label: 你希望 App 怎麼幫你
+      placeholder: 例如：在超商時可以直接列出 3 個符合我今天剩餘熱量的組合
+    validations:
+      required: true
+  - type: dropdown
+    id: importance
+    attributes:
+      label: 對你有多重要
+      options:
+        - 每天都會用到
+        - 偶爾會用到
+        - 有的話不錯
